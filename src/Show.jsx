@@ -23,12 +23,13 @@ export default function Show({ Info }) {
     }
 
     const bgImage = getWeatherImage(Info.weather);
+    const defaultImage = "https://res.cloudinary.com/dzffc9b1p/image/upload/v1766024725/WeatherApp_wbct4n.png";
 
     return (
         <Card className="weather-card">
             <CardMedia
                 className="weather-image"
-                image={bgImage}
+                image={bgImage?bgImage:defaultImage}
                 title={Info.weather}
             />
             <CardContent>
